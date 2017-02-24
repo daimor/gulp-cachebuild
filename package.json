@@ -1,0 +1,30 @@
+{
+  "name": "gulp-cachebuild",
+  "version": "0.0.1",
+  "description": "Concat Cache project in one file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "daimor",
+  "license": "MIT",
+  "dependencies": {
+    "fs": "0.0.2",
+    "gulp-util": "^3.0.7",
+    "through2": "^2.0.0",
+    "xml2js": "^0.4.15"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daimor/gulp-cachebuild.git"
+  },
+  "keywords": [
+    "intersystems",
+    "gulpplugin"
+  ],
+  "bugs": {
+    "url": "https://github.com/daimor/gulp-cachebuild/issues"
+  },
+  "homepage": "https://github.com/daimor/gulp-cachebuild#readme"
+}
