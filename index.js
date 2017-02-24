@@ -68,12 +68,11 @@ module.exports = function(file, options) {
         var items = exportData[key]
         items.forEach(function(exportItem) {
           var type = key === 'Routine' ? exportItem.$.type : types[key]
-          console.log(key, file.path)
           if (key == 'Project') {
             project.$.name = exportItem.$.name
           } else if (type) {
             var name = exportItem.$.name
-            console.log(type, name)
+            gutil.log('Adding:', type, name)
             if (type == 'CSP' && options.cspApplication) {
               exportItem.$.application = options.cspApplication
             }
@@ -104,7 +103,9 @@ module.exports = function(file, options) {
       return
     }
 
-    xml.Project = [project]
+    if (project.$.name) {
+      xml.Project = [project]
+    }
 
     var cacheFile = new File({
       cwd: '',
